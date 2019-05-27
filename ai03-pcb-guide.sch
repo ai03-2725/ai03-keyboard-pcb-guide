@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 26 0
+LIBS:ai03-pcb-guide-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -14,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Microchip_ATmega:ATmega32U4-AU U1
-U 1 1 5C33F15A
-P 3650 3625
-F 0 "U1" H 3650 1739 50  0000 C CNN
-F 1 "ATmega32U4-AU" H 3650 1648 50  0000 C CNN
-F 2 "Housings_QFP:TQFP-44_10x10mm_Pitch0.8mm" H 3650 3625 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" H 3650 3625 50  0001 C CNN
-	1    3650 3625
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR0101
 U 1 1 5C33F300
 P 3550 1700
@@ -37,12 +27,6 @@ F 3 "" H 3550 1700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3550 1700 3550 1825
-Wire Wire Line
-	3550 1825 3650 1825
-Connection ~ 3550 1825
-Connection ~ 3650 1825
-Wire Wire Line
-	3650 1825 3750 1825
 $Comp
 L power:GND #PWR0102
 U 1 1 5C33F3A3
@@ -54,11 +38,6 @@ F 3 "" H 3175 5425 50  0001 C CNN
 	1    3175 5425
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3175 5425 3550 5425
-Connection ~ 3550 5425
-Wire Wire Line
-	3550 5425 3650 5425
 $Comp
 L Device:R_Small R4
 U 1 1 5C33F45C
@@ -247,21 +226,6 @@ $EndComp
 Wire Wire Line
 	2450 2925 3050 2925
 $Comp
-L Device:Crystal_GND24_Small Y1
-U 1 1 5C341379
-P 2450 2425
-F 0 "Y1" V 2404 2591 50  0000 L CNN
-F 1 "16MHz" V 2495 2591 50  0000 L CNN
-F 2 "Crystals:Crystal_SMD_3225-4pin_3.2x2.5mm" H 2450 2425 50  0001 C CNN
-F 3 "~" H 2450 2425 50  0001 C CNN
-	1    2450 2425
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2450 2325 3050 2325
-Wire Wire Line
-	3050 2525 2450 2525
-$Comp
 L Device:C_Small C1
 U 1 1 5C341D22
 P 2100 2250
@@ -284,15 +248,9 @@ F 3 "~" H 2100 2600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2450 2325 2200 2325
-Wire Wire Line
 	2200 2325 2200 2250
-Connection ~ 2450 2325
-Wire Wire Line
-	2450 2525 2200 2525
 Wire Wire Line
 	2200 2525 2200 2600
-Connection ~ 2450 2525
 $Comp
 L power:GND #PWR0108
 U 1 1 5C344074
@@ -582,4 +540,45 @@ Text GLabel 4250 4025 2    50   Input ~ 0
 ROW0
 Text GLabel 4250 2725 2    50   Input ~ 0
 ROW1
+Wire Wire Line
+	2550 2425 2575 2425
+Wire Wire Line
+	2350 2425 2325 2425
+$Comp
+L MCU_Microchip_ATmega:ATmega32U4-AU U1
+U 1 1 5CEB8A23
+P 3650 3625
+F 0 "U1" H 3650 1736 50  0000 C CNN
+F 1 "ATmega32U4-AU" H 3650 1645 50  0000 C CNN
+F 2 "Housings_QFP:TQFP-44_10x10mm_Pitch0.8mm" H 3650 3625 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" H 3650 3625 50  0001 C CNN
+	1    3650 3625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 1825 3650 1825
+Wire Wire Line
+	3175 5425 3550 5425
+Connection ~ 3550 1825
+Wire Wire Line
+	2200 2325 2450 2325
+Wire Wire Line
+	2200 2525 2450 2525
+$Comp
+L Device:Crystal_GND24_Small Y1
+U 1 1 5CEBCEA8
+P 2450 2425
+F 0 "Y1" V 2404 2569 50  0000 L CNN
+F 1 "Crystal_GND24_Small" V 2495 2569 50  0000 L CNN
+F 2 "Crystals:Crystal_SMD_3225-4pin_3.2x2.5mm" H 2450 2425 50  0001 C CNN
+F 3 "~" H 2450 2425 50  0001 C CNN
+	1    2450 2425
+	0    1    1    0   
+$EndComp
+Connection ~ 2450 2525
+Wire Wire Line
+	2450 2525 3050 2525
+Connection ~ 2450 2325
+Wire Wire Line
+	2450 2325 3050 2325
 $EndSCHEMATC
