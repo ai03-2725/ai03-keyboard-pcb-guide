@@ -545,10 +545,10 @@ Wire Wire Line
 Wire Wire Line
 	2350 2425 2325 2425
 $Comp
-L MCU_Microchip_ATmega:ATmega32U4-AU U?
+L MCU_Microchip_ATmega:ATmega32U4-AU U1
 U 1 1 5CEB8A23
 P 3650 3625
-F 0 "U?" H 3650 1736 50  0000 C CNN
+F 0 "U1" H 3650 1736 50  0000 C CNN
 F 1 "ATmega32U4-AU" H 3650 1645 50  0000 C CNN
 F 2 "Housings_QFP:TQFP-44_10x10mm_Pitch0.8mm" H 3650 3625 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" H 3650 3625 50  0001 C CNN

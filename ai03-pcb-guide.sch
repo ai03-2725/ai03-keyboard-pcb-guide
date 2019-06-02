@@ -409,17 +409,6 @@ $EndComp
 Wire Wire Line
 	6200 2075 6125 2075
 $Comp
-L MX_Alps_Hybrids:MX-1U MX1
-U 1 1 5C34B436
-P 7150 3500
-F 0 "MX1" H 7236 3717 60  0000 C CNN
-F 1 "MX-1U" H 7236 3643 20  0000 C CNN
-F 2 "MX_Alps_Hybrid:MX-1U" H 7125 3475 60  0001 C CNN
-F 3 "" H 7125 3475 60  0001 C CNN
-	1    7150 3500
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:D_Small D1
 U 1 1 5C34B4DF
 P 7025 3775
@@ -432,17 +421,6 @@ F 3 "~" V 7025 3775 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7025 3675 7125 3675
-$Comp
-L MX_Alps_Hybrids:MX-1U MX2
-U 1 1 5C34C49C
-P 7800 3500
-F 0 "MX2" H 7886 3717 60  0000 C CNN
-F 1 "MX-1U" H 7886 3643 20  0000 C CNN
-F 2 "MX_Alps_Hybrid:MX-1U" H 7775 3475 60  0001 C CNN
-F 3 "" H 7775 3475 60  0001 C CNN
-	1    7800 3500
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:D_Small D2
 U 1 1 5C34C4A3
@@ -457,17 +435,6 @@ $EndComp
 Wire Wire Line
 	7675 3675 7775 3675
 $Comp
-L MX_Alps_Hybrids:MX-1U MX3
-U 1 1 5C34D1F8
-P 7150 4225
-F 0 "MX3" H 7236 4442 60  0000 C CNN
-F 1 "MX-1U" H 7236 4368 20  0000 C CNN
-F 2 "MX_Alps_Hybrid:MX-1U" H 7125 4200 60  0001 C CNN
-F 3 "" H 7125 4200 60  0001 C CNN
-	1    7150 4225
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:D_Small D3
 U 1 1 5C34D1FF
 P 7025 4500
@@ -480,17 +447,6 @@ F 3 "~" V 7025 4500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7025 4400 7125 4400
-$Comp
-L MX_Alps_Hybrids:MX-1U MX4
-U 1 1 5C34D207
-P 7800 4225
-F 0 "MX4" H 7886 4442 60  0000 C CNN
-F 1 "MX-1U" H 7886 4368 20  0000 C CNN
-F 2 "MX_Alps_Hybrid:MX-1U" H 7775 4200 60  0001 C CNN
-F 3 "" H 7775 4200 60  0001 C CNN
-	1    7800 4225
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:D_Small D4
 U 1 1 5C34D20E
@@ -514,16 +470,6 @@ Wire Wire Line
 Connection ~ 7025 4600
 Wire Wire Line
 	7025 4600 6525 4600
-Wire Wire Line
-	7325 4200 7325 3475
-Connection ~ 7325 3475
-Wire Wire Line
-	7325 3475 7325 3025
-Wire Wire Line
-	7975 4200 7975 3475
-Connection ~ 7975 3475
-Wire Wire Line
-	7975 3475 7975 3025
 Text GLabel 7325 3025 1    50   Input ~ 0
 COL0
 Text GLabel 7975 3025 1    50   Input ~ 0
@@ -581,4 +527,58 @@ Wire Wire Line
 Connection ~ 2450 2325
 Wire Wire Line
 	2450 2325 3050 2325
+Wire Wire Line
+	7325 3025 7325 3475
+Wire Wire Line
+	7975 3025 7975 3475
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX?
+U 1 1 5D099790
+P 7175 3525
+F 0 "MX?" H 7208 3748 60  0000 C CNN
+F 1 "MX-NoLED" H 7208 3674 20  0000 C CNN
+F 2 "" H 6550 3500 60  0001 C CNN
+F 3 "" H 6550 3500 60  0001 C CNN
+	1    7175 3525
+	1    0    0    -1  
+$EndComp
+Connection ~ 7325 3475
+Wire Wire Line
+	7325 3475 7325 4200
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX?
+U 1 1 5D09A176
+P 7825 3525
+F 0 "MX?" H 7858 3748 60  0000 C CNN
+F 1 "MX-NoLED" H 7858 3674 20  0000 C CNN
+F 2 "" H 7200 3500 60  0001 C CNN
+F 3 "" H 7200 3500 60  0001 C CNN
+	1    7825 3525
+	1    0    0    -1  
+$EndComp
+Connection ~ 7975 3475
+Wire Wire Line
+	7975 3475 7975 4200
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX?
+U 1 1 5D09AA2F
+P 7175 4250
+F 0 "MX?" H 7208 4473 60  0000 C CNN
+F 1 "MX-NoLED" H 7208 4399 20  0000 C CNN
+F 2 "" H 6550 4225 60  0001 C CNN
+F 3 "" H 6550 4225 60  0001 C CNN
+	1    7175 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX?
+U 1 1 5D09B9B4
+P 7825 4250
+F 0 "MX?" H 7858 4473 60  0000 C CNN
+F 1 "MX-NoLED" H 7858 4399 20  0000 C CNN
+F 2 "" H 7200 4225 60  0001 C CNN
+F 3 "" H 7200 4225 60  0001 C CNN
+	1    7825 4250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
